@@ -1,0 +1,1331 @@
+/* ===================================================
+   DAV PUBLIC SCHOOL NIT CAMPUS ADITYAPUR
+   CLASS X-A WEBSITE
+   STYLE.CSS (PART 1)
+=================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(-45deg,
+#001219,
+#005f73,
+#0a9396,
+#94d2bd,
+#005f73,
+#001219);
+
+background-size:500% 500%;
+
+animation:gradientBG 18s ease infinite;
+
+color:white;
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+}
+
+/* Animated Background */
+
+@keyframes gradientBG{
+
+0%{
+background-position:0% 50%;
+}
+
+25%{
+background-position:50% 100%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+75%{
+background-position:50% 0%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#012a36;
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#00ffd5;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:white;
+
+}
+
+/* Navigation */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 40px;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(15px);
+
+z-index:1000;
+
+box-shadow:0 5px 20px rgba(0,255,255,.25);
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#00ffd5;
+
+letter-spacing:2px;
+
+text-shadow:0 0 20px cyan;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+nav ul li{
+
+list-style:none;
+
+}
+
+nav ul li a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+font-size:18px;
+
+transition:.4s;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+}
+
+nav ul li a:hover{
+
+background:#00ffd5;
+
+color:#001219;
+
+box-shadow:0 0 25px cyan;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+.hero-card{
+
+max-width:950px;
+
+padding:50px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.2);
+
+box-shadow:
+
+0 0 30px rgba(0,255,255,.3),
+
+0 0 60px rgba(0,255,255,.15);
+
+animation:floating 6s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+margin-bottom:18px;
+
+color:white;
+
+text-shadow:
+
+0 0 10px cyan,
+
+0 0 30px cyan,
+
+0 0 50px cyan;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+color:#ffe066;
+
+margin-bottom:18px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.9;
+
+}
+
+/* Buttons */
+
+.btns{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+font-size:18px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:40px;
+
+background:linear-gradient(45deg,#00ffd5,#0099ff);
+
+color:white;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(0,255,255,.4);
+
+}
+
+.btn:hover{
+
+transform:translateY(-8px) scale(1.05);
+
+box-shadow:
+
+0 0 25px cyan,
+
+0 0 60px cyan;
+
+}
+
+/* Sections */
+
+.section{
+
+padding:100px 8%;
+
+}
+
+.title{
+
+font-size:44px;
+
+text-align:center;
+
+margin-bottom:50px;
+
+color:#00ffd5;
+
+text-shadow:0 0 15px cyan;
+
+}
+
+/* Grid */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+/* Cards */
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+padding:30px;
+
+border-radius:22px;
+
+transition:.4s;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 0 20px rgba(0,255,255,.18);
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+
+0 0 35px cyan,
+
+0 0 60px rgba(0,255,255,.2);
+
+}
+
+.card h3{
+
+font-size:26px;
+
+margin-bottom:18px;
+
+color:#ffe066;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/* Fade Animation */
+
+.fade{
+
+animation:fadeIn 1.2s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/*==================================================
+        STYLE.CSS PART 2
+ Tables • Forms • Statistics • Footer
+===================================================*/
+
+/* ---------- Student Search ---------- */
+
+.container{
+
+width:92%;
+
+max-width:1200px;
+
+margin:120px auto 40px;
+
+}
+
+.search-box{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 0 30px rgba(0,255,255,.18);
+
+text-align:center;
+
+}
+
+.search-box h2{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+color:#00ffd5;
+
+}
+
+input{
+
+width:80%;
+
+max-width:450px;
+
+padding:16px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:50px;
+
+outline:none;
+
+background:white;
+
+color:#222;
+
+transition:.3s;
+
+}
+
+input:focus{
+
+transform:scale(1.03);
+
+box-shadow:0 0 20px cyan;
+
+}
+
+button{
+
+margin-top:20px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:bold;
+
+background:linear-gradient(45deg,#00ffd5,#00a8ff);
+
+color:white;
+
+transition:.4s;
+
+box-shadow:0 0 18px cyan;
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 35px cyan;
+
+}
+
+/* ---------- Result Box ---------- */
+
+#result{
+
+margin-top:35px;
+
+padding:25px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 0 25px rgba(0,255,255,.15);
+
+font-size:20px;
+
+line-height:2;
+
+animation:fadeIn .8s;
+
+}
+
+/* ---------- Tables ---------- */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:30px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(0,255,255,.2);
+
+}
+
+th{
+
+background:#00bcd4;
+
+padding:18px;
+
+font-size:18px;
+
+color:white;
+
+letter-spacing:1px;
+
+}
+
+td{
+
+padding:15px;
+
+font-size:17px;
+
+text-align:center;
+
+border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+tr:nth-child(even){
+
+background:rgba(255,255,255,.05);
+
+}
+
+tr:hover{
+
+background:rgba(0,255,255,.18);
+
+transition:.3s;
+
+transform:scale(1.01);
+
+}
+
+/* ---------- Statistics ---------- */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.stat{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 0 20px rgba(0,255,255,.15);
+
+}
+
+.stat:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 40px cyan;
+
+}
+
+.stat h1{
+
+font-size:55px;
+
+color:#00ffd5;
+
+margin-bottom:10px;
+
+}
+
+.stat p{
+
+font-size:20px;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+margin-top:60px;
+
+padding:45px;
+
+text-align:center;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(15px);
+
+border-top:2px solid rgba(255,255,255,.15);
+
+}
+
+footer h2{
+
+color:#00ffd5;
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+line-height:1.8;
+
+font-size:17px;
+
+}
+
+/* ---------- Links ---------- */
+
+a{
+
+transition:.3s;
+
+}
+
+a:hover{
+
+opacity:.9;
+
+}
+
+/* ---------- Images ---------- */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+border-radius:15px;
+
+transition:.4s;
+
+}
+
+img:hover{
+
+transform:scale(1.04);
+
+box-shadow:0 0 30px cyan;
+
+}
+
+/* ---------- Text Selection ---------- */
+
+::selection{
+
+background:#00ffd5;
+
+color:#001219;
+
+}
+
+/* ---------- Utility Classes ---------- */
+
+.center{
+
+text-align:center;
+
+}
+
+.mt20{
+
+margin-top:20px;
+
+}
+
+.mt40{
+
+margin-top:40px;
+
+}
+
+.mb20{
+
+margin-bottom:20px;
+
+}
+
+.round{
+
+border-radius:20px;
+
+}
+
+.shadow{
+
+box-shadow:0 0 25px rgba(0,255,255,.2);
+
+}
+/*==================================================
+        STYLE.CSS PART 3
+ Responsive • Premium Animations
+===================================================*/
+
+/* Floating Background Circles */
+
+.circle{
+
+position:fixed;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+pointer-events:none;
+
+animation:floatCircle linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes floatCircle{
+
+0%{
+
+transform:translateY(110vh) scale(.5);
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:translateY(-150px) scale(1.4);
+
+opacity:0;
+
+}
+
+}
+
+/* Pulse */
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:0 0 0 rgba(0,255,255,.4);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+box-shadow:0 0 30px cyan;
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:0 0 0 rgba(0,255,255,.4);
+
+}
+
+}
+
+/* Card Shine */
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-50%;
+
+width:60%;
+
+height:300%;
+
+background:rgba(255,255,255,.18);
+
+transform:rotate(25deg);
+
+transition:.8s;
+
+}
+
+.card:hover::before{
+
+left:130%;
+
+}
+
+/* Zoom */
+
+.zoom:hover{
+
+transform:scale(1.08);
+
+transition:.4s;
+
+}
+
+/* Rotate */
+
+.rotate:hover{
+
+transform:rotate(3deg);
+
+transition:.4s;
+
+}
+
+/* Floating */
+
+.float{
+
+animation:floatingItem 4s ease-in-out infinite;
+
+}
+
+@keyframes floatingItem{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Glowing Text */
+
+.glow{
+
+text-shadow:
+
+0 0 10px cyan,
+
+0 0 20px cyan,
+
+0 0 40px cyan;
+
+}
+
+/* Fade Up */
+
+.fade-up{
+
+animation:fadeUp 1s;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Bounce */
+
+.bounce{
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,20%,50%,80%,100%{
+
+transform:translateY(0);
+
+}
+
+40%{
+
+transform:translateY(-12px);
+
+}
+
+60%{
+
+transform:translateY(-6px);
+
+}
+
+}
+
+/* Rotate Icon */
+
+.rotate360:hover{
+
+transform:rotate(360deg);
+
+transition:1s;
+
+}
+
+/* Neon Border */
+
+.neon{
+
+border:2px solid cyan;
+
+box-shadow:
+
+0 0 15px cyan,
+
+0 0 30px cyan;
+
+}
+
+/* Glass Box */
+
+.glass{
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.2);
+
+border-radius:20px;
+
+}
+
+/* Smooth Reveal */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(70px);
+
+animation:reveal 1s forwards;
+
+}
+
+@keyframes reveal{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Footer Animation */
+
+footer{
+
+animation:footerFade 1.5s;
+
+}
+
+@keyframes footerFade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* Hover Lift */
+
+.lift:hover{
+
+transform:translateY(-12px);
+
+transition:.4s;
+
+}
+
+/* Gradient Text */
+
+.gradient-text{
+
+background:linear-gradient(90deg,#00ffd5,#00a8ff,#00ffd5);
+
+background-size:200%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:textMove 4s linear infinite;
+
+}
+
+@keyframes textMove{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:200%;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:992px){
+
+nav{
+
+padding:15px 20px;
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:12px;
+
+margin-top:15px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.title{
+
+font-size:34px;
+
+}
+
+.card{
+
+padding:22px;
+
+}
+
+}
+
+/* Small Phones */
+
+@media(max-width:600px){
+
+.hero{
+
+padding-top:90px;
+
+}
+
+.hero-card{
+
+padding:25px;
+
+}
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+input{
+
+width:100%;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+table{
+
+font-size:14px;
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+.stat h1{
+
+font-size:36px;
+
+}
+
+}
+
+/* End */
+
+body{
+
+animation:pageLoad .8s;
+
+}
+
+@keyframes pageLoad{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+}

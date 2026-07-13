@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Name Origin Finder</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.container{
+max-width:700px;
+margin:auto;
+margin-top:50px;
+text-align:center;
+}
+
+input{
+width:300px;
+padding:12px;
+font-size:18px;
+border-radius:8px;
+}
+
+button{
+padding:12px 20px;
+font-size:18px;
+margin-left:10px;
+cursor:pointer;
+}
+
+#result{
+margin-top:30px;
+padding:20px;
+border-radius:10px;
+font-size:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Name Origin Finder</h1>
+
+<p>Enter Admission Number</p>
+
+<input type="number" id="adm" placeholder="Admission Number">
+
+<button onclick="searchStudent()">Search</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+const students={
+
+"12383":{roll:1,name:"AISHIKA MANDAL",origin:"Bengali"},
+"14143":{roll:2,name:"AKANSHA SINHA",origin:"Hindi / Sanskrit"},
+"14601":{roll:3,name:"ANISHKA SINHA",origin:"Hindi / Sanskrit"},
+"9518":{roll:4,name:"ARADHYA KUMARI",origin:"Sanskrit / Hindi"},
+"8675":{roll:5,name:"ARYA SINGH",origin:"Sanskrit / Hindi"},
+"8666":{roll:6,name:"ASHA KUMARI PRADHAN",origin:"Sanskrit + Odia"},
+"8766":{roll:7,name:"CHANDRIKA BISHAI",origin:"Odia"},
+"14285":{roll:8,name:"HARSHITA RAI",origin:"Hindi / Sanskrit"},
+"13690":{roll:9,name:"ISHIKA DUBEY",origin:"Hindi / Sanskrit"},
+"9402":{roll:10,name:"MAMTA MAHATO",origin:"Hindi"},
+"8651":{roll:11,name:"PANTULA ANANYAKRUTI",origin:"Telugu"},
+"8679":{roll:12,name:"PARUN PRIYA",origin:"Bengali"},
+"11485":{roll:13,name:"PRACHI GUPTA",origin:"Hindi / Sanskrit"},
+"8657":{roll:14,name:"RAJ LAXMI KUMARI",origin:"Hindi / Sanskrit"},
+"11112":{roll:15,name:"RAKHI ROY",origin:"Bengali"},
+"12891":{roll:16,name:"SHWETA KUMARI",origin:"Hindi / Sanskrit"},
+"12841":{roll:17,name:"SIDDHI MOHANTY",origin:"Odia"},
+"14614":{roll:18,name:"SNEHA PAL",origin:"Bengali"},
+"9156":{roll:19,name:"SUHANA KUMARI",origin:"Hindi / Urdu"},
+"8785":{roll:20,name:"SUNIDHI KUMARI",origin:"Hindi / Sanskrit"},
+"9378":{roll:21,name:"SUPRIYA SONAM",origin:"Hindi / Sanskrit"},
+"14179":{roll:22,name:"SWETA GUPTA",origin:"Hindi / Sanskrit"},
+"9161":{roll:23,name:"TANVI KUMARI",origin:"Sanskrit"},
+"11931":{roll:24,name:"AASHMAN KANT",origin:"Hindi / Sanskrit"},
+"8659":{roll:25,name:"ABHINAV KUMAR",origin:"Hindi / Sanskrit"},
+"9171":{roll:26,name:"ABHISHEK PRADHAN",origin:"Sanskrit + Odia"},
+"13768":{roll:27,name:"ADARSH KUMAR",origin:"Hindi / Sanskrit"},
+"14121":{roll:28,name:"ADARSH KUMAR JHA",origin:"Maithili"},
+"14117":{roll:29,name:"AKSHAT RATHORE",origin:"Sanskrit"},
+"13402":{roll:30,name:"ANIKET PATHAK",origin:"Sanskrit"},
+"12707":{roll:31,name:"ANISH RAI",origin:"Hindi"},
+"8672":{roll:32,name:"ANMOL ANAND",origin:"Hindi"},
+"9257":{roll:33,name:"AYUSH KUMAR NAVIK",origin:"Sanskrit"},
+"14176":{roll:34,name:"AYUSH PRADHAN",origin:"Sanskrit + Odia"},
+"14034":{roll:35,name:"CHINMAY RAMAN",origin:"Sanskrit"},
+"11550":{roll:36,name:"DHRUV DAS",origin:"Sanskrit"},
+"13284":{roll:37,name:"HIMANSHU MURMU",origin:"Santali"},
+"11973":{roll:38,name:"JIGAR BASA",origin:"Gujarati"},
+"9187":{roll:39,name:"KAILASH SARDAR",origin:"Sanskrit"},
+"8757":{roll:40,name:"K. SAI RAO",origin:"Telugu"},
+"14171":{roll:41,name:"MAYANK KUMAR",origin:"Hindi / Sanskrit"},
+"9304":{roll:42,name:"MIHUL SINGH",origin:"Hindi"},
+"8755":{roll:43,name:"NILESH THAKUR",origin:"Marathi / Hindi"},
+"13863":{roll:44,name:"OISHIK DAS",origin:"Bengali"},
+"10055":{roll:45,name:"PRANAV KUMAR MAHATO",origin:"Sanskrit"},
+"8734":{roll:46,name:"PREETAM SANTRA SINGH",origin:"Bengali + Hindi"},
+"14182":{roll:47,name:"PRIYADARSHAN MOHAPATRA",origin:"Sanskrit + Odia"},
+"9216":{roll:48,name:"PRIYANSHU RAJ",origin:"Sanskrit"},
+"9597":{roll:49,name:"RAJ KUMAR",origin:"Hindi"},
+"14265":{roll:50,name:"RAVI KISHAN SINGH",origin:"Hindi / Sanskrit"},
+"14203":{roll:51,name:"ROHIT PRADHAN",origin:"Sanskrit + Odia"},
+"10029":{roll:52,name:"SAKSHAM RAJ",origin:"Sanskrit"},
+"14224":{roll:53,name:"SANJU GORAI",origin:"Bengali"},
+"13772":{roll:54,name:"SHAURYA RAJ",origin:"Sanskrit"},
+"11471":{roll:55,name:"SUBHAMITRA JENA",origin:"Odia"},
+"12469":{roll:56,name:"SUBOJIT SARKAR",origin:"Bengali"},
+"8727":{roll:57,name:"TANMAY DUBEY",origin:"Sanskrit"},
+"8751":{roll:58,name:"TEJASH MAHATO",origin:"Sanskrit"},
+"8653":{roll:59,name:"YASHWANT SINGH",origin:"Hindi / Sanskrit"}
+
+};
+
+function searchStudent(){
+
+let adm=document.getElementById("adm").value;
+
+let result=document.getElementById("result");
+
+if(students[adm]){
+
+let s=students[adm];
+
+result.innerHTML=`
+<h2>${s.name}</h2>
+
+<p><b>Admission Number :</b> ${adm}</p>
+
+<p><b>Roll Number :</b> ${s.roll}</p>
+
+<p><b>Class :</b> X-A</p>
+
+<p><b>Name Origin :</b> ${s.origin}</p>
+`;
+
+}
+
+else{
+
+result.innerHTML="<h2 style='color:red;'>Wrong Admission Number!</h2>";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class X-A | DAV Public School NIT Campus Adityapur</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#0b8793);
+
+background-size:400% 400%;
+
+animation:bg 15s ease infinite;
+
+overflow-x:hidden;
+
+color:white;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(12px);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 50px;
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#00ffcc;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:25px;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:#00ffd5;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero-card{
+
+max-width:900px;
+
+padding:45px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+box-shadow:0 0 40px rgba(0,255,255,.35);
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+.hero h1{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+text-shadow:0 0 20px cyan;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+margin-bottom:18px;
+
+color:#ffe066;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+.btns{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 28px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+color:white;
+
+background:linear-gradient(45deg,#00b09b,#96c93d);
+
+transition:.4s;
+
+box-shadow:0 0 20px rgba(0,255,170,.4);
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 35px cyan;
+
+}
+
+.section{
+
+padding:90px 8%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:45px;
+
+color:#00ffd5;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(14px);
+
+border-radius:20px;
+
+padding:30px;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(0,255,255,.2);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h3{
+
+color:#ffe066;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+
+margin-top:40px;
+
+}
+
+.stat{
+
+background:rgba(255,255,255,.15);
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+}
+
+.stat h1{
+
+font-size:50px;
+
+color:#00ffd5;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:35px;
+
+background:rgba(0,0,0,.4);
+
+margin-top:50px;
+
+}
+
+.circle{
+
+position:fixed;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.08);
+
+animation:move linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes move{
+
+from{
+
+transform:translateY(110vh);
+
+}
+
+to{
+
+transform:translateY(-150px);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">CLASS X-A</div>
+
+<ul>
+
+<li><a href="home.html">Home</a></li>
+
+<li><a href="students.html">Student Search</a></li>
+
+<li><a href="aboutclass.html">Class Details</a></li>
+
+<li><a href="talents.html">Talents</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-card">
+
+<h1>DAV PUBLIC SCHOOL</h1>
+
+<h2>NIT CAMPUS ADITYAPUR</h2>
+
+<p>
+
+Jamshedpur • Jharkhand • India
+
+</p>
+
+<br>
+
+<h2>CLASS X-A (2026–27)</h2>
+
+<p>
+
+Welcome to the official digital profile of Class X-A.
+
+Explore our students, teachers, talents and achievements through this interactive website.
+
+</p>
+
+<div class="btns">
+
+<a class="btn" href="students.html">Student Search</a>
+
+<a class="btn" href="aboutclass.html">Class Details</a>
+
+<a class="btn" href="talents.html">Student Talents</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h1 class="title">
+
+Class Teachers
+
+</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Class Teacher</h3>
+
+<p>
+
+Mrs. Jaya Rohatgi
+
+<br>
+
+Subject : English
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Co-Class Teacher</h3>
+
+<p>
+
+Mrs. Lopamudra
+
+<br>
+
+History
+
+<br>
+
+Political Science
+
+<br>
+
+Economics
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h1 class="title">
+
+Class Representatives
+
+</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Boys' Class Representative</h3>
+
+<p>
+
+Master Ayush Kumar Navik
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Girls' Class Representative</h3>
+
+<p>
+
+Asha Kumari Pradhan
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Deputy Boys' Representative</h3>
+
+<p>
+
+Master Pranav Kumar Mahato
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Deputy Girls' Representative</h3>
+
+<p>
+
+Aaradhya Kumari
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<h1 class="title">Class Statistics</h1>
+
+<div class="stats">
+
+<div class="stat">
+<h1>59</h1>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h1>10</h1>
+<p>Subjects</p>
+</div>
+
+<div class="stat">
+<h1>4</h1>
+<p>Website Pages</p>
+</div>
+
+<div class="stat">
+<h1>2026-27</h1>
+<p>Academic Session</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h1 class="title">About Our School</h1>
+
+<div class="card">
+
+<p style="font-size:20px;line-height:2;text-align:justify;">
+
+<b>DAV Public School, NIT Campus, Adityapur, Jamshedpur, Jharkhand</b> is one of the leading educational institutions dedicated to academic excellence, discipline, innovation, cultural values and holistic development. The school encourages students to excel in academics, sports, science exhibitions, technology, leadership and extracurricular activities while following the ideals of the DAV movement.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h1 class="title">Quick Navigation</h1>
+
+<div class="btns">
+
+<a class="btn" href="students.html">Student Search</a>
+
+<a class="btn" href="aboutclass.html">Teachers & Representatives</a>
+
+<a class="btn" href="talents.html">Student Talents</a>
+
+<a class="btn" href="home.html">Back To Top</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>DAV PUBLIC SCHOOL NIT CAMPUS ADITYAPUR</h2>
+
+<p>Jamshedpur • Jharkhand • India</p>
+
+<br>
+
+<p>Official Digital Class Profile</p>
+
+<p>Class X-A (2026–2027)</p>
+
+<br>
+
+<p>Designed with ❤ for Class X-A</p>
+
+</footer>
+
+<script>
+
+const title=document.querySelector(".hero h1");
+
+const text="DAV PUBLIC SCHOOL";
+
+let i=0;
+
+title.innerHTML="";
+
+function typing(){
+
+if(i<text.length){
+
+title.innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,120);
+
+}
+
+}
+
+typing();
+
+for(let j=0;j<35;j++){
+
+let c=document.createElement("div");
+
+c.className="circle";
+
+let size=Math.random()*90+20;
+
+c.style.width=size+"px";
+
+c.style.height=size+"px";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.animationDuration=(10+Math.random()*20)+"s";
+
+c.style.animationDelay=Math.random()*8+"s";
+
+document.body.appendChild(c);
+
+}
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(80px)";
+
+card.style.transition="1s";
+
+observer.observe(card);
+
+});
+
+</script>
+
+</body>
+</html>
